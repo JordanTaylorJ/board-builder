@@ -14,9 +14,9 @@ const Navbar = () => {
             <Container>
                 <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Bike Builder 
+                    Board Builder 
                 </Typography>
-                <Button color="inherit">Build A Bike</Button>
+                <Button color="inherit">Build Your Board</Button>
                 <Button color="inherit">Results</Button>
                 </Toolbar>
             </Container>
