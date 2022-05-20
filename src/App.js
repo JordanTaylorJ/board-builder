@@ -2,14 +2,23 @@ import React from  "react";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import BoardBuilder from "./components/BoardBuilder";
+import Results from "./components/Results"
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter className="App">
       <Navbar />
-      <Home />
-      <BoardBuilder />  
-    </div>
+        <Route path="/BoardBuilder">
+          <BoardBuilder/>
+        </Route>  
+        <Route exact path= "/">
+          <Home />
+        </Route>
+        <Route path="/Results">
+          <Results/>
+        </Route>
+    </BrowserRouter>
   );
 }
 
