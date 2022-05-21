@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import BoardBuilder from "./components/BoardBuilder";
 import Results from "./components/Results"
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
   return (

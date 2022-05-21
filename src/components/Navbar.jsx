@@ -16,7 +16,9 @@ const Navbar = () => {
             <Container>
                 <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Home 
+                    <Button color="inherit" component={Link} to="/">
+                    Home
+                </Button>
                 </Typography>
                 <Button color="inherit" component={Link} to="/BoardBuilder">
                     Build Your Board
