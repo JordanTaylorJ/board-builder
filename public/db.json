@@ -1,0 +1,32 @@
+{
+    "boards": [
+        { 
+            "id": 1,
+            "decks": [
+                "longboard",
+                "deck2"
+            ]
+        },
+        {
+            "id": 2,
+            "trucks": [
+                "truck1",
+                "truck2"
+            ]
+        },
+        {
+            "id": 3,
+            "wheels": [
+                "one",
+                "two"
+            ]
+        },
+        {
+            "id": 4,
+            "griptape": [
+                true,
+                false
+            ]
+        }
+    ]
+}   
