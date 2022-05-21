@@ -4,7 +4,8 @@
             "id": 1,
             "decks": [
                 "longboard",
-                "deck2"
+                "deck2",
+                "deck3"
             ]
         },
         {
@@ -17,8 +18,8 @@
         {
             "id": 3,
             "wheels": [
-                "one",
-                "two"
+                "wheels1",
+                "wheels2"
             ]
         },
         {

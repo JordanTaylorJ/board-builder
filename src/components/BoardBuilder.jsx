@@ -44,7 +44,7 @@ const steps = [
   },
 ];
 
-const BoardBuilder =() => {
+const BoardBuilder =({boards, onAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -76,7 +76,7 @@ const BoardBuilder =() => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector />
+                  <Selector boards={boards} onAddBoard={onAddBoard} />
                 <div>
                   <Button
                     variant="contained"
