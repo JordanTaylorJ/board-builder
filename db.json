@@ -33,7 +33,7 @@
             ]
         }
     ],
-    "completeBoards" : [
+    "completeBoards": [
         {
             "id": 1,
             "deck": "londboard",

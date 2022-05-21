@@ -12,9 +12,11 @@ import Selector from './Selector';
 const steps = [
   {
     label: 'Select a deck',
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    description: `Standard decks are best for tricks and skateparks. Cruiser decks
+                are similar to a standard deck, but typically with only a rear kicktail,
+                making them ideal for short commutes. Old school decks are typically
+                wider and longer than a standard deck. The longboard, is intended for 
+                long distances, high speeds, and downhill riding.`,
   },
   {
     label: 'Choose your trucks',
@@ -23,24 +25,21 @@ const steps = [
   },
   {
     label: 'Select your wheels',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `The main differences between wheels are size, hardness, and grip.
+              Harder smaller wheels are best in skateparks and bigger, grippier
+              wheels handle better for distance and commute rides.`,
   },
   {
     label: 'Add risers',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `While risers are not necessary, they add height between the board
+                and trucks, giving the rider more clearance for sharper, snappier 
+                turns and tricks.`,
   },
   {
     label: 'Grip tape',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `You'll want to add some grip to your deck. The standard route is
+                griptape, but you can also use a spray-on grip. This is typically
+                for preserving the asthetics of the board.`,
   },
 ];
 
@@ -66,7 +65,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
           <Step key={step.label}>
             <StepLabel
               optional={
-                index === 2 ? (
+                index === 4 ? (
                   <Typography variant="caption">Last step</Typography>
                 ) : null
               }

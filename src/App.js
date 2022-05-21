@@ -1,4 +1,4 @@
-import React, {useState} from  "react";
+import React, {useState, useEffect} from  "react";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import BoardBuilder from "./components/BoardBuilder";
@@ -9,8 +9,15 @@ function App() {
 
   const [boards, setBoards] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:4000/completeboards")
+      .then((completedboards) => completedboards.json())
+      .then((completedBoards) => setBoards(completedBoards))
+      console.log(boards);
+  }, []);
+
   function handleAddBoard(newBoard){
-    setBoards(newBoard)
+    setBoards([...boards, newBoard])
   }
 
   return (
