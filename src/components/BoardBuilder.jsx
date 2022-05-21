@@ -7,6 +7,7 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import Selector from './Selector';
 
 const steps = [
   {
@@ -75,6 +76,7 @@ const BoardBuilder =() => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
+                  <Selector />
                 <div>
                   <Button
                     variant="contained"
