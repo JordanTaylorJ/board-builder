@@ -16,7 +16,7 @@ const Selector = ({boards, onAddBoard}) => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={boards}
+          value={''}
           label="boards"
           onChange={((e) => onAddBoard(e.target.value))}
         >

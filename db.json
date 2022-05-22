@@ -12,8 +12,9 @@
         {
             "id": 2,
             "trucks": [
-                "truck1",
-                "truck2"
+                "standard kingpin",
+                "reverse kingpin",
+                "drop through"
             ]
         },
         {
