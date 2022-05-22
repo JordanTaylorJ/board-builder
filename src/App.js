@@ -11,9 +11,9 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:4000/completeboards")
-      .then((completedboards) => completedboards.json())
-      .then((completedBoards) => setBoards(completedBoards))
-      console.log(boards);
+      .then((response) => response.json())
+      .then((completeBoards) => setBoards(completeBoards))
+      console.log([boards]);
   }, []);
 
   function handleAddBoard(newBoard){

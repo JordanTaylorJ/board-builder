@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState, useEffect} from "react";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -6,8 +6,14 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 const Selector = ({boards, onAddBoard}) => {
+  
+  const [parts, setParts] = useState([]);
 
-
+  useEffect(() => {
+    fetch("http://localhost:4000/parts")
+      .then((response) => response.json())
+      .then((newParts) => setParts(newParts))
+  }, [])
 
   return (
     <Box sx={{ minWidth: 120 }}>
