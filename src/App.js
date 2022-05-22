@@ -13,7 +13,7 @@ function App() {
     fetch("http://localhost:4000/completeboards")
       .then((response) => response.json())
       .then((completeBoards) => setBoards(completeBoards))
-      console.log([boards]);
+      console.log("from app", boards);
   }, []);
 
   function handleAddBoard(newBoard){
@@ -30,7 +30,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Results">
-          <Results/>
+          <Results boards={boards}/>
         </Route>
     </BrowserRouter>
   );
