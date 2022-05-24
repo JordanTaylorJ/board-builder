@@ -10,10 +10,11 @@ const Selector = ({boards, onAddBoard}) => {
   const [parts, setParts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/parts")
-      .then((response) => response.json())
-      .then((newParts) => setParts(newParts))
-  }, [])
+    fetch("http://localhost:3001/parts")
+    .then(r => r.json())
+    .then(data => setParts(data))
+  }, []);
+
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -24,7 +25,7 @@ const Selector = ({boards, onAddBoard}) => {
           id="demo-simple-select"
           value={''}
           label="boards"
-          onChange={((e) => onAddBoard(e.target.value))}
+          /*onChange={((e) => onAddBoard(e.target.value))}*/
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>

@@ -10,10 +10,9 @@ function App() {
   const [boards, setBoards] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/completeboards")
-      .then((response) => response.json())
-      .then((completeBoards) => setBoards(completeBoards))
-      console.log("from app", boards);
+    fetch("http://localhost:3001/completeboards")
+    .then(r => r.json())
+    .then((data) => setBoards(data))
   }, []);
 
   function handleAddBoard(newBoard){
@@ -30,7 +29,12 @@ function App() {
           <Home />
         </Route>
         <Route path="/Results">
-          <Results boards={boards}/>
+          {boards.map((board) => 
+            <Results 
+              key={board.id}
+              board={board}
+            />
+            )}
         </Route>
     </BrowserRouter>
   );

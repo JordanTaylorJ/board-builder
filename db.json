@@ -1,47 +1,53 @@
 {
-    "parts": [
-        { 
-            "id": 1,
-            "decks": [
-                "standard",
-                "cruiser",
-                "oldschool",
-                "longboard"
-            ]
-        },
-        {
-            "id": 2,
-            "trucks": [
-                "standard kingpin",
-                "reverse kingpin",
-                "drop through"
-            ]
-        },
-        {
-            "id": 3,
-            "wheels": [
-                "skatepark",
-                "street",
-                "cruiser",
-                "longboard"
-            ]
-        },
-        {
-            "id": 4,
-            "griptape": [
-                true,
-                false
-            ]
-        }
-    ],
-    "completeBoards": [
-        {
-            "id": 1,
-            "deck": "londboard",
-            "trucks": "drop through",
-            "wheels": "cruiser",
-            "griptape": false
-        }
-    ]
-}   
-
+  "parts": [
+    {
+      "id": 1,
+      "decks": [
+        "standard",
+        "cruiser",
+        "oldschool",
+        "longboard"
+      ]
+    },
+    {
+      "id": 2,
+      "trucks": [
+        "standard kingpin",
+        "reverse kingpin",
+        "drop through"
+      ]
+    },
+    {
+      "id": 3,
+      "wheels": [
+        "skatepark",
+        "street",
+        "cruiser",
+        "longboard"
+      ]
+    },
+    {
+      "id": 4,
+      "griptape": [
+        true,
+        false
+      ]
+    }
+  ],
+  "completeBoards": [
+    {
+      "id": 1,
+      "deck": "londboard",
+      "trucks": "drop through",
+      "wheels": "cruiser",
+      "griptape": false
+    },
+    {
+      "id": 2,
+      "deck": "cruiser",
+      "trucks": "reverse kingpin",
+      "wheels": "cruiser",
+      "griptape": true
+    }
+  ]
+}
