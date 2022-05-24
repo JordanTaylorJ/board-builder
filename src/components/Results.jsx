@@ -1,12 +1,18 @@
 import React from 'react'
 
-const Results = ({board}) => {
+const Results = ({boards}) => {
 
   return (
     <div>
         <h1>Results</h1>
-        <p>{board.deck}</p>
-      
+        {boards.map((board) => 
+          <p key={board.id} >
+            Board {board.id}
+            {board.deck} 
+            {board.trucks} 
+            {board.wheels} 
+          </p>
+        )}
     </div>
   )
 }

@@ -29,12 +29,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Results">
-          {boards.map((board) => 
-            <Results 
-              key={board.id}
-              board={board}
-            />
-            )}
+            <Results boards={boards}/>
         </Route>
     </BrowserRouter>
   );

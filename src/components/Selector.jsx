@@ -14,7 +14,7 @@ const Selector = ({boards, onAddBoard}) => {
     .then(r => r.json())
     .then(data => setParts(data))
   }, []);
-
+  
 
   return (
     <Box sx={{ minWidth: 120 }}>
