@@ -1,8 +1,10 @@
 {
-  "parts": [
+  "steps": [
     {
       "id": 1,
-      "decks": [
+      "label": "Select a deck",
+      "description": "Standard decks are best for tricks and skateparks. Cruiser decks are similar to a standard deck, but typically with only a rear kicktail, making them ideal for short commutes. Old school decks are typically wider and longer than a standard deck. The longboard, is intended for long distances, high speeds, and downhill riding.",
+      "parts": [
         "standard",
         "cruiser",
         "oldschool",
@@ -11,14 +13,19 @@
     },
     {
       "id": 2,
-      "trucks": [
-        "standard kingpin",
-        "reverse kingpin",
-        "drop through"
-      ]
+      "label": "Choose your trucks",
+      "description":
+        "An ad group contains one or more ads which target a shared set of keywords.",
+        "trucks": [
+          "standard kingpin",
+          "reverse kingpin",
+          "drop through"
+        ]
     },
     {
       "id": 3,
+      "label": "Select your wheels",
+      "description": "The main differences between wheels are size, hardness, and grip. Harder smaller wheels are best in skateparks and bigger, grippier wheels handle better for distance and commute rides.",
       "wheels": [
         "skatepark",
         "street",
@@ -28,16 +35,25 @@
     },
     {
       "id": 4,
+      "label": "Add risers",
+      "description": "While risers are not necessary, they add height between the board and trucks, giving the rider more clearance for sharper, snappier turns and tricks."
+    },
+    {
+      "id": 5,
+      "label": "Grip tape",
+      "description":"You'll want to add some grip to your deck. The standard route is griptape, but you can also use a spray-on grip. This is typically for preserving the asthetics of the board.",
       "griptape": [
         true,
         false
       ]
     }
   ],
+
+
   "completeBoards": [
     {
       "id": 1,
-      "deck": "londboard",
+      "deck": "longboard",
       "trucks": "drop through",
       "wheels": "cruiser",
       "griptape": false

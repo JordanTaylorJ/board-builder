@@ -5,16 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const Selector = ({boards, onAddBoard}) => {
-  
-  const [parts, setParts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/parts")
-    .then(r => r.json())
-    .then(data => setParts(data))
-  }, []);
-  
+const Selector = ({parts, boards, onAddBoard}) => {
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -27,9 +18,12 @@ const Selector = ({boards, onAddBoard}) => {
           label="boards"
           /*onChange={((e) => onAddBoard(e.target.value))}*/
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          {parts.map((part) => 
+            <MenuItem key={part.id}>{part.decks}</MenuItem>
+          )
+          //<MenuItem >Twenty</MenuItem>
+          //<MenuItem >Thirty</MenuItem>
+          }
         </Select>
       </FormControl>
     </Box>

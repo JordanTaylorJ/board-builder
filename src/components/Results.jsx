@@ -6,12 +6,18 @@ const Results = ({boards}) => {
     <div>
         <h1>Results</h1>
         {boards.map((board) => 
-          <p key={board.id} >
-            Board {board.id}
+        <div>
+          <h2 key={board.id}>Board {board.id}</h2>
+          <li> 
             {board.deck} 
+          </li>
+          <li> 
             {board.trucks} 
+          </li>
+          <li> 
             {board.wheels} 
-          </p>
+          </li>
+        </div>
         )}
     </div>
   )

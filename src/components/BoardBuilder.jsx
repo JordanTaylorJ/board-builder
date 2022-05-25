@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -9,6 +9,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Selector from './Selector';
 
+/*
 const steps = [
   {
     label: 'Select a deck',
@@ -41,7 +42,7 @@ const steps = [
                 griptape, but you can also use a spray-on grip. This is typically
                 for preserving the asthetics of the board.`,
   },
-];
+]; */
 
 const BoardBuilder =({boards, onAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -57,6 +58,14 @@ const BoardBuilder =({boards, onAddBoard}) => {
   const handleReset = () => {
     setActiveStep(0);
   };
+
+  const [steps, setSteps] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/steps")
+    .then(r => r.json())
+    .then(data => setSteps(data))
+  }, []);
 
   return (
     <Box sx={{ maxWidth: 400 }}>
@@ -75,7 +84,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector boards={boards} onAddBoard={onAddBoard} />
+                  <Selector parts={step.parts} boards={boards} onAddBoard={onAddBoard} />
                 <div>
                   <Button
                     variant="contained"
