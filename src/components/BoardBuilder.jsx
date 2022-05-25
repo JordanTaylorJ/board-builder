@@ -65,7 +65,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
     fetch("http://localhost:3001/steps")
     .then(r => r.json())
     .then(data => setSteps(data))
-  }, []);
+  }, []);   
 
   return (
     <Box sx={{ maxWidth: 400 }}>

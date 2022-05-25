@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const Selector = ({parts, boards, onAddBoard}) => {
+const Selector = ({parts, onAddBoard}) => {
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -19,7 +19,7 @@ const Selector = ({parts, boards, onAddBoard}) => {
           /*onChange={((e) => onAddBoard(e.target.value))}*/
         >
           {parts.map((part) => 
-            <MenuItem key={part.id}>{part.decks}</MenuItem>
+            <MenuItem key={part}>{part}</MenuItem>
           )
           //<MenuItem >Twenty</MenuItem>
           //<MenuItem >Thirty</MenuItem>

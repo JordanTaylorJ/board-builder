@@ -16,7 +16,7 @@
       "label": "Choose your trucks",
       "description":
         "An ad group contains one or more ads which target a shared set of keywords.",
-        "trucks": [
+        "parts": [
           "standard kingpin",
           "reverse kingpin",
           "drop through"
@@ -26,7 +26,7 @@
       "id": 3,
       "label": "Select your wheels",
       "description": "The main differences between wheels are size, hardness, and grip. Harder smaller wheels are best in skateparks and bigger, grippier wheels handle better for distance and commute rides.",
-      "wheels": [
+      "parts": [
         "skatepark",
         "street",
         "cruiser",
@@ -36,15 +36,19 @@
     {
       "id": 4,
       "label": "Add risers",
-      "description": "While risers are not necessary, they add height between the board and trucks, giving the rider more clearance for sharper, snappier turns and tricks."
+      "description": "While risers are not necessary, they add height between the board and trucks, giving the rider more clearance for sharper, snappier turns and tricks.",
+      "parts": [
+        "risers",
+        "no risers"
+      ]
     },
     {
       "id": 5,
       "label": "Grip tape",
       "description":"You'll want to add some grip to your deck. The standard route is griptape, but you can also use a spray-on grip. This is typically for preserving the asthetics of the board.",
-      "griptape": [
-        true,
-        false
+      "parts": [
+        "griptape",
+        "no griptape"
       ]
     }
   ],
@@ -56,14 +60,16 @@
       "deck": "longboard",
       "trucks": "drop through",
       "wheels": "cruiser",
-      "griptape": false
+      "risers": "no risers",
+      "griptape": "no griptape"
     },
     {
       "id": 2,
       "deck": "cruiser",
       "trucks": "reverse kingpin",
+      "risers": "risers",
       "wheels": "cruiser",
-      "griptape": true
+      "griptape": "griptape"
     }
   ]
 }
