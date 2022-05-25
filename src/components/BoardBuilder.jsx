@@ -9,41 +9,6 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Selector from './Selector';
 
-/*
-const steps = [
-  {
-    label: 'Select a deck',
-    description: `Standard decks are best for tricks and skateparks. Cruiser decks
-                are similar to a standard deck, but typically with only a rear kicktail,
-                making them ideal for short commutes. Old school decks are typically
-                wider and longer than a standard deck. The longboard, is intended for 
-                long distances, high speeds, and downhill riding.`,
-  },
-  {
-    label: 'Choose your trucks',
-    description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
-  },
-  {
-    label: 'Select your wheels',
-    description: `The main differences between wheels are size, hardness, and grip.
-              Harder smaller wheels are best in skateparks and bigger, grippier
-              wheels handle better for distance and commute rides.`,
-  },
-  {
-    label: 'Add risers',
-    description: `While risers are not necessary, they add height between the board
-                and trucks, giving the rider more clearance for sharper, snappier 
-                turns and tricks.`,
-  },
-  {
-    label: 'Grip tape',
-    description: `You'll want to add some grip to your deck. The standard route is
-                griptape, but you can also use a spray-on grip. This is typically
-                for preserving the asthetics of the board.`,
-  },
-]; */
-
 const BoardBuilder =({boards, onAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
