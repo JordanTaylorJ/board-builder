@@ -1,3 +1,17 @@
+BoardBuilder was designed as a tool to build out a complete skateboard.
+
+Tech Stack: 
+* Javascript React
+* MUI 
+
+Features:
+* Homepage display with navigation panel
+* Step-by-step guide to build out your board.
+* List created boards
+* Delete for each build
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

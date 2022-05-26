@@ -24,7 +24,16 @@ const BoardBuilder =({boards, onAddBoard}) => {
     setActiveStep(0);
   };
 
+  const [newBoard, setNewBoard] = useState({
+    deck: "",
+    trucks: "",
+    wheels: "",
+    risers: "",
+    griptape: ""
+});
+
   const [steps, setSteps] = useState([]);
+
 
   useEffect(() => {
     fetch("http://localhost:3001/steps")
@@ -49,7 +58,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector parts={step.parts} boards={boards} onAddBoard={onAddBoard} />
+                  <Selector parts={step.parts} setNewBoard={setNewBoard} newBoard={newBoard} />
                 <div>
                   <Button
                     variant="contained"
@@ -73,7 +82,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
+          <Typography>Click on the results - you&apos;re finished</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reset
           </Button>

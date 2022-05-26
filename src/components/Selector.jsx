@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const Selector = ({parts, onAddBoard}) => {
+const Selector = ({parts, setNewBoard, newBoard}) => {
 
+  
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
@@ -14,16 +15,13 @@ const Selector = ({parts, onAddBoard}) => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={''}
+          value={newBoard.value}
           label="boards"
-          /*onChange={((e) => onAddBoard(e.target.value))}*/
+          onChange={((e) => setNewBoard(...newBoard, e.target.value))}
         >
           {parts.map((part) => 
             <MenuItem key={part}>{part}</MenuItem>
-          )
-          //<MenuItem >Twenty</MenuItem>
-          //<MenuItem >Thirty</MenuItem>
-          }
+          )}
         </Select>
       </FormControl>
     </Box>
