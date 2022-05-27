@@ -24,14 +24,6 @@ const BoardBuilder =({boards, onAddBoard}) => {
     setActiveStep(0);
   };
 
-  const [newBoard, setNewBoard] = useState({
-    deck: "",
-    trucks: "",
-    wheels: "",
-    risers: "",
-    griptape: ""
-});
-
   const [steps, setSteps] = useState([]);
 
 
@@ -58,7 +50,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector parts={step.parts} setNewBoard={setNewBoard} newBoard={newBoard} />
+                  <Selector parts={step.parts} />
                 <div>
                   <Button
                     variant="contained"

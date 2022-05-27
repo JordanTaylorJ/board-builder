@@ -1,10 +1,10 @@
-BoardBuilder was designed as a tool to build out a complete skateboard.
+##BoardBuilder was designed as a tool to build out a complete skateboard.
 
-Tech Stack: 
+##Tech Stack: 
 * Javascript React
 * MUI 
 
-Features:
+##Features:
 * Homepage display with navigation panel
 * Step-by-step guide to build out your board.
 * List created boards

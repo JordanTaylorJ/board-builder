@@ -1,12 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const Selector = ({parts, setNewBoard, newBoard}) => {
+const Selector = ({ parts }) => {
 
+  const [newBoard, setNewBoard] = useState({
+    deck: "",
+    trucks: "",
+    wheels: "",
+    risers: "",
+    griptape: ""
+  });
+
+  const handleChange = (e) => {
+    setNewBoard({...newBoard, [e.target.name]: e.target.value})
+    console.log(newBoard)
+  }
   
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -15,12 +27,12 @@ const Selector = ({parts, setNewBoard, newBoard}) => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={newBoard.value}
-          label="boards"
-          onChange={((e) => setNewBoard(...newBoard, e.target.value))}
+          value={part}
+          label="part"
+          onChange={handleChange}
         >
           {parts.map((part) => 
-            <MenuItem key={part}>{part}</MenuItem>
+            <MenuItem key={part} >{part}</MenuItem>
           )}
         </Select>
       </FormControl>
