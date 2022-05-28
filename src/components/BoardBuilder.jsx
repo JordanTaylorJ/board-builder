@@ -50,7 +50,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector parts={step.parts} />
+                  <Selector parts={step.parts} boards={boards} steps={steps}/>
                 <div>
                   <Button
                     variant="contained"

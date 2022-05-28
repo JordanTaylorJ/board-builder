@@ -1,11 +1,18 @@
-import React, {useState} from "react";
-import Box from '@mui/material/Box';
+
+/*import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+*/
 
-const Selector = ({ parts }) => {
+import React, {useState} from "react";
+//import * as React from 'react';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+
+const Selector = ({ parts, boards, steps }) => {
 
   const [newBoard, setNewBoard] = useState({
     deck: "",
@@ -16,25 +23,43 @@ const Selector = ({ parts }) => {
   });
 
   const handleChange = (e) => {
+    e.preventDefault()
     setNewBoard({...newBoard, [e.target.name]: e.target.value})
-    console.log(newBoard)
+    console.log("from selector", newBoard)
+  }
+
+
+    return (
+      <FormGroup>
+        {parts.map((part) =>
+        <FormControlLabel control={<Checkbox />} key={part} label={part} />
+        )}
+      </FormGroup>
+    );
   }
   
+
+export default Selector;
+
+
+  {/*
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Select One</InputLabel>
+        {parts.map((part) => 
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={part}
           label="part"
+          value={part}
           onChange={handleChange}
         >
-          {parts.map((part) => 
-            <MenuItem key={part} >{part}</MenuItem>
-          )}
+          
+            <MenuItem key={part} value={part} >{part}</MenuItem>
+          
         </Select>
+        )}
       </FormControl>
     </Box>
   );
@@ -84,4 +109,4 @@ function Selector() {
 
 export default Selector;
 
-*/
+*/}
