@@ -17,8 +17,8 @@ const Selector = ({ parts }) => {
   const handleChange = (position, part) => {
       const updateCheckedState = position === part ? !checked : checked
       setChecked(updateCheckedState)
-    //setNewBoard({...newBoard, [e.target.name]: e.target.value})
-    //console.log("from selector", newBoard)
+      setNewBoard({...newBoard, [parts]: part})
+      console.log("from selector", newBoard)
   }
   
     return (
