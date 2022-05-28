@@ -7,7 +7,7 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Selector from './Selector';
+//import Card from './Card';
 
 const BoardBuilder =({boards, onAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -50,7 +50,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector parts={step.parts} boards={boards} steps={steps}/>
+                  {/*<Card parts={step.parts} boards={boards} steps={steps}/>*/}
                 <div>
                   <Button
                     variant="contained"
