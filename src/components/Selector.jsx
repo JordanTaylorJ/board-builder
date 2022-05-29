@@ -1,14 +1,8 @@
 import React, {useState} from "react";
 
-const Selector = ({ parts }) => {
+const Selector = ({ parts, partType }) => {
 
-  const [newBoard, setNewBoard] = useState({
-    deck: "",
-    trucks: "",
-    wheels: "",
-    risers: "",
-    griptape: ""
-  });
+  const [newBoard, setNewBoard] = useState();
 
   const [checked, setChecked] = useState(
     new Array(parts.length).fill(false)
@@ -17,7 +11,7 @@ const Selector = ({ parts }) => {
   const handleChange = (position, part) => {
       const updateCheckedState = position === part ? !checked : checked
       setChecked(updateCheckedState)
-      setNewBoard({...newBoard, [parts]: part})
+      setNewBoard({...newBoard, [partType]: part})
       console.log("from selector", newBoard)
   }
   
@@ -25,7 +19,7 @@ const Selector = ({ parts }) => {
       <div>
         {parts.map((part) =>
         <label key={part}>
-          <input type="checkbox" checked={checked[part.index]} onChange={() => handleChange(part.index)}/>
+          <input type="checkbox" checked={checked[part.index]} onChange={() => handleChange(part.index, part)}/>
           {part}
         </label>
         )}

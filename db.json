@@ -6,7 +6,7 @@
       "description": "Standard decks are best for tricks and skateparks. Cruiser decks are similar to a standard deck, but typically with only a rear kicktail, making them ideal for short commutes. Old school decks are typically wider and longer than a standard deck. The longboard, is intended for long distances, high speeds, and downhill riding.",
       "parts": [
         "standard",
-        "cruiser",
+        "cruiser/carver",
         "oldschool",
         "longboard"
       ]
@@ -57,19 +57,23 @@
   "completeBoards": [
     {
       "id": 1,
-      "deck": "longboard",
-      "trucks": "drop through",
-      "wheels": "cruiser",
-      "risers": "no risers",
-      "griptape": "no griptape"
+      "parts":[ 
+        "longboard",
+        "drop through",
+        "cruiser",
+        "no risers",
+        "no griptape"
+      ]
     },
     {
       "id": 2,
-      "deck": "cruiser",
-      "trucks": "reverse kingpin",
-      "risers": "risers",
-      "wheels": "cruiser",
-      "griptape": "griptape"
+      "parts": [
+        "cruiser/carver",
+        "reverse kingpin",
+        "risers",
+        "cruiser",
+        "griptape"
+      ]
     }
   ]
 }
