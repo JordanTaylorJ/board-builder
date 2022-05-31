@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-const Selector = ({ parts, index }) => {
+const Selector = ({ parts, index, handleAddBoard }) => {
 
-  const [newBoard, setNewBoard] = useState([]);
+  const [newBoard, setNewBoard] = useState({});
 
   const [checked, setChecked] = useState(
     new Array(parts.length).fill(false)
@@ -15,8 +15,9 @@ const Selector = ({ parts, index }) => {
       )
       setChecked(updateChecked)
       setNewBoard({...newBoard, part})
-      console.log("from selector", newBoard)
+      
       console.log(checked)
+      console.log("from selector", newBoard)
   }
   
     return (

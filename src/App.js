@@ -15,15 +15,16 @@ function App() {
     .then((data) => setBoards(data))
   }, []);
 
-  function handleAddBoard(newBoard){
-    setBoards([...boards, newBoard])
+  const handleAddBoard = (e, newBoard) => {
+    console.log(newBoard)
+    /*setBoards([...boards, newBoard])*/
   }
 
   return (
     <BrowserRouter className="App">
       <Navbar />
         <Route path="/BoardBuilder">
-          <BoardBuilder boards={boards} onAddBoard={handleAddBoard} />
+          <BoardBuilder boards={boards} handleAddBoard={handleAddBoard} />
         </Route>  
         <Route exact path= "/">
           <Home />

@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Selector from './Selector'; 
 
-const BoardBuilder =({boards, onAddBoard}) => {
+const BoardBuilder =({boards, handleAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -53,6 +53,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
                   <Selector 
                     parts={step.parts} 
                     index={step.parts.index}
+                    handleAddBoard={handleAddBoard}
                   />
                 <div>
                   <Button
