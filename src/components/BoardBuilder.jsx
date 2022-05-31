@@ -51,7 +51,6 @@ const BoardBuilder =({boards, onAddBoard}) => {
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
                   <Selector 
-                    partType={step.parts.value}
                     parts={step.parts} 
                     steps={steps}
                   />

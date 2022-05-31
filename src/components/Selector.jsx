@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-const Selector = ({ parts, partType }) => {
+const Selector = ({ parts }) => {
 
-  const [newBoard, setNewBoard] = useState();
+  const [newBoard, setNewBoard] = useState([]);
 
   const [checked, setChecked] = useState(
     new Array(parts.length).fill(false)
@@ -11,8 +11,9 @@ const Selector = ({ parts, partType }) => {
   const handleChange = (position, part) => {
       const updateCheckedState = position === part ? !checked : checked
       setChecked(updateCheckedState)
-      setNewBoard({...newBoard, [partType]: part})
+      setNewBoard({...newBoard, part})
       console.log("from selector", newBoard)
+      console.log(checked)
   }
   
     return (

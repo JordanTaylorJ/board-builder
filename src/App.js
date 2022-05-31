@@ -7,7 +7,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
 
-  const [boards, setBoards] = useState([]);
+  const [boards, setBoards] = useState({});
 
   useEffect(() => {
     fetch("http://localhost:3001/completeboards")
