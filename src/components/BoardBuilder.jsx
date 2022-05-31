@@ -52,7 +52,7 @@ const BoardBuilder =({boards, onAddBoard}) => {
               <Box sx={{ mb: 2 }}>
                   <Selector 
                     parts={step.parts} 
-                    steps={steps}
+                    index={step.parts.index}
                   />
                 <div>
                   <Button
