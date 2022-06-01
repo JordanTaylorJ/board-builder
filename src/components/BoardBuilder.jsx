@@ -17,11 +17,14 @@ const BoardBuilder = () => {
       {steps.map((step) => 
         <form key={step.id}> 
           <label> {step.label}</label>
-          <input 
-            type="text" 
+          <select 
             name="deck"
             aria-label="deck"
-          ></input>
+          >
+            {step.parts.map((part) => 
+              <option key={part} value={part}>{part}</option>
+            )}
+          Select One</select>
         </form>
       )}
     </div>
