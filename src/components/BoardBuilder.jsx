@@ -51,7 +51,7 @@ const BoardBuilder =({boards, handleAddBoard}) => {
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
                   <Selector 
-                    parts={step.parts} 
+                    step={step} 
                     index={step.parts.index}
                     handleAddBoard={handleAddBoard}
                   />
