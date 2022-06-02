@@ -4,23 +4,18 @@ const Selector = ({ step, handleAddBoard }) => {
 
   const [newBoard, setNewBoard] = useState([]);
 
-  /*const handleSubmit = (newBoard) => {
-    e.preventDefault()
-    setBoards(newBoard, ...boards)
-  }*/
+
 
   const handleChange = (e) => {
       console.log(e.target.value)
-      setNewBoard(...newBoard, e.target.value)
+      setNewBoard({...newBoard, [e.target.name]: e.target.value})
       console.log("from selector", newBoard)
   }
   
     return (
       <div>
-        <form key={step.id}> 
+        <form key={step.id} onSubmit={(e) => handleAddBoard(e)}> 
           <select 
-            name="deck"
-            aria-label='deck'
             value={step.parts.value}
             onChange={handleChange}
           > 

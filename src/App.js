@@ -16,9 +16,11 @@ function App() {
   }, []);
 
   const handleAddBoard = (e, newBoard) => {
+    e.preventDefault()
     console.log(newBoard)
-    /*setBoards([...boards, newBoard])*/
+    /*setBoards(...boards, newBoard)*/
   }
+
 
   return (
     <BrowserRouter className="App">
