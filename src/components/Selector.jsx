@@ -2,10 +2,16 @@ import React, {useState} from "react";
 
 const Selector = ({ step, handleAddBoard }) => {
 
-  const [newBoard, setNewBoard] = useState({});
+  const [newBoard, setNewBoard] = useState([]);
 
-  const handleChange = (part) => {
-      setNewBoard({...newBoard, part})
+  /*const handleSubmit = (newBoard) => {
+    e.preventDefault()
+    setBoards(newBoard, ...boards)
+  }*/
+
+  const handleChange = (e) => {
+      console.log(e.target.value)
+      setNewBoard(...newBoard, e.target.value)
       console.log("from selector", newBoard)
   }
   
@@ -15,9 +21,11 @@ const Selector = ({ step, handleAddBoard }) => {
           <select 
             name="deck"
             aria-label='deck'
+            value={step.parts.value}
+            onChange={handleChange}
           > 
             {step.parts.map((part) =>
-              <option key={part} value={part}>{part}</option>
+              <option key={part} value={part}>{part} </option>
             )}
           Select One</select>
         </form>
