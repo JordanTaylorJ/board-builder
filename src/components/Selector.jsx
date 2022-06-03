@@ -8,7 +8,7 @@ const Selector = ({ step, handleAddBoard }) => {
 
   const handleChange = (e) => {
       console.log(e.target.value)
-      setNewBoard({...newBoard, [e.target.name]: e.target.value})
+      setNewBoard([...newBoard, e.target.value])
       console.log("from selector", newBoard)
   }
   
