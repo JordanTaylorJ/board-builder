@@ -10,7 +10,7 @@ const Results = ({boards}) => {
 
   return (
     <div> 
-      <h1 color="text.secondary.dark">Results</h1>
+      <h1>Results</h1>
         {boards.map((board) => 
           <Card sx={{ minWidth: 275 }} key={board.id}>
             <CardContent>
