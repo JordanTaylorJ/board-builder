@@ -4,6 +4,27 @@ import Navbar from "./components/Navbar";
 import BoardBuilder from "./components/BoardBuilder";
 import Results from "./components/Results"
 import {BrowserRouter, Route} from "react-router-dom";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#928f66',
+    },
+    secondary: {
+      light: '#b09b99',
+      main: '#928f66',
+    },
+    contrastThreshold: 3,
+    tonalOffset: 0.2,
+  },
+  components: {
+    MuiButton: {
+          color: "green"
+    }
+  }
+});
+
 
 function App() {
 
@@ -23,6 +44,7 @@ function App() {
 
 
   return (
+    <ThemeProvider theme={theme}> 
     <BrowserRouter className="App">
       <Navbar />
         <Route path="/BoardBuilder">
@@ -35,6 +57,7 @@ function App() {
             <Results boards={boards}/>
         </Route>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

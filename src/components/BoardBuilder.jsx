@@ -35,7 +35,7 @@ const BoardBuilder =({boards, handleAddBoard}) => {
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper activeStep={activeStep}  orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel
@@ -59,7 +59,7 @@ const BoardBuilder =({boards, handleAddBoard}) => {
                   <Button
                     variant="contained"
                     onClick={handleNext}
-                    sx={{ mt: 1, mr: 1 }}
+                    sx={{ mt: 1, mr: 1}}
                   >
                     {index === steps.length - 1 ? 'Finish' : 'Continue'}
                   </Button>
