@@ -26,7 +26,6 @@ const BoardBuilder =({boards, handleAddBoard}) => {
 
   const [steps, setSteps] = useState([]);
 
-
   useEffect(() => {
     fetch("http://localhost:3001/steps")
     .then(r => r.json())
@@ -34,6 +33,7 @@ const BoardBuilder =({boards, handleAddBoard}) => {
   }, []);   
 
   return (
+    <>
     <Box sx={{ maxWidth: 400 }}>
       <Stepper activeStep={activeStep}  orientation="vertical">
         {steps.map((step, index) => (
@@ -85,6 +85,13 @@ const BoardBuilder =({boards, handleAddBoard}) => {
         </Paper>
       )}
     </Box>
+    <Box> 
+      <img 
+      src={"https://images.unsplash.com/photo-1546345352-9b13905ebd40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1508&q=80}/"}
+      alt="skate"
+      />
+    </Box>
+    </>
   );
 }
 
