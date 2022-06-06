@@ -12,8 +12,9 @@ import Selector from './Selector';
 const BoardBuilder =({boards, handleAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
-  const handleNext = () => {
+  const handleNext = (e) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    if (steps.index === steps.length - 1) handleAddBoard(e)
   };
 
   /*const handleBack = () => {

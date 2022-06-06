@@ -16,13 +16,12 @@
       "id": 2,
       "name": "trucks",
       "label": "Choose your trucks",
-      "description":
-        "An ad group contains one or more ads which target a shared set of keywords.",
-        "parts": [
-          "standard kingpin",
-          "reverse kingpin",
-          "drop through"
-        ]
+      "description": "An ad group contains one or more ads which target a shared set of keywords.",
+      "parts": [
+        "standard kingpin",
+        "reverse kingpin",
+        "drop through"
+      ]
     },
     {
       "id": 3,
@@ -50,19 +49,17 @@
       "id": 5,
       "name": "griptape",
       "label": "Grip tape",
-      "description":"You'll want to add some grip to your deck. The standard route is griptape, but you can also use a spray-on grip. This is typically for preserving the asthetics of the board.",
+      "description": "You'll want to add some grip to your deck. The standard route is griptape, but you can also use a spray-on grip. This is typically for preserving the asthetics of the board.",
       "parts": [
         "griptape",
         "no griptape"
       ]
     }
   ],
-
-
   "completeBoards": [
     {
       "id": 1,
-      "parts":[ 
+      "parts": [
         "longboard",
         "drop through",
         "cruiser",
