@@ -14,6 +14,8 @@ const BoardBuilder =({boards, handleAddBoard}) => {
 
   const handleNext = (e) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    if (e.target.value === "Finish") 
+      handleAddBoard(e)
   };
   
   /*const handleBack = () => {
@@ -25,10 +27,16 @@ const BoardBuilder =({boards, handleAddBoard}) => {
   };
 
   const [steps, setSteps] = useState([]);
-  const [newBoard, setNewBoard] = useState([]);
+  const [newBoard, setNewBoard] = useState({
+    deck: '',
+    trucks: '',
+    wheels: '',
+    risers: '',
+    griptape: ''
+  });
 
   const handleChange = (e) => {
-    setNewBoard([...newBoard, e.target.value])
+    setNewBoard({...newBoard, [e.target.name] : e.target.value})
     console.log("from selector", newBoard)
 }
   console.log("outside", newBoard)
