@@ -38,8 +38,15 @@ function App() {
 
   const handleAddBoard = (e, newBoard) => {
     e.preventDefault()
-    console.log(newBoard)
+    console.log("from app", newBoard)
     setBoards(...boards, newBoard)
+    fetch("http://localhost:3001/completeboards", {
+      method: 'POST',
+      headers: { 
+        "Content-Type": "application/json", 
+      },
+      body: JSON.stringify(newBoard),
+    });
   }
 
 
