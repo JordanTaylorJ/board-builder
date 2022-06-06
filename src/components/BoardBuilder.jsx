@@ -14,9 +14,8 @@ const BoardBuilder =({boards, handleAddBoard}) => {
 
   const handleNext = (e) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    if (steps.index === steps.length - 1) handleAddBoard(e)
   };
-
+  
   /*const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };*/ 
@@ -26,6 +25,13 @@ const BoardBuilder =({boards, handleAddBoard}) => {
   };
 
   const [steps, setSteps] = useState([]);
+  const [newBoard, setNewBoard] = useState([]);
+
+  const handleChange = (e) => {
+    setNewBoard([...newBoard, e.target.value])
+    console.log("from selector", newBoard)
+}
+  console.log("outside", newBoard)
 
   useEffect(() => {
     fetch("http://localhost:3001/steps")
@@ -53,8 +59,8 @@ const BoardBuilder =({boards, handleAddBoard}) => {
               <Box sx={{ mb: 2 }}>
                   <Selector 
                     step={step} 
-                    index={step.parts.index}
                     handleAddBoard={handleAddBoard}
+                    handleChange={handleChange}
                   />
                 <div>
                   <Button
