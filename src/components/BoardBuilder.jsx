@@ -9,13 +9,15 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Selector from './Selector'; 
 
-const BoardBuilder =({boards, handleAddBoard}) => {
+const BoardBuilder =({handleAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = (e) => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    if (e.target.value === "Finish") 
-      handleAddBoard(e)
+    console.log('from handlenext', e.target.name)
+    if (e.target.name === 5) 
+      {handleAddBoard(e, newBoard)} else {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1)
+      }
   };
   
   const handleBack = () => {
@@ -37,7 +39,6 @@ const BoardBuilder =({boards, handleAddBoard}) => {
 
   const handleChange = (e) => {
     setNewBoard({...newBoard, [e.target.name] : e.target.value})
-    console.log("from selector", newBoard)
 }
   console.log("outside", newBoard)
 
@@ -73,7 +74,8 @@ const BoardBuilder =({boards, handleAddBoard}) => {
                 <div>
                   <Button
                     variant="contained"
-                    onClick={handleNext}
+                    name={step.id}
+                    onClick={(e) => handleNext(e)}
                     sx={{ mt: 1, mr: 1}}
                   >
                     {index === steps.length - 1 ? 'Finish' : 'Continue'}
