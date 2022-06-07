@@ -49,6 +49,12 @@ function App() {
     });
   }
 
+  const handleDeleteBoard = () => {
+    fetch("http://localhost:3001/completeboards", {
+      method: 'DELETE'
+    });
+  }
+
 
   return (
     <ThemeProvider theme={theme}> 
@@ -61,7 +67,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Results">
-            <Results boards={boards}/>
+            <Results boards={boards} handleDeleteBoard={handleDeleteBoard}/>
         </Route>
     </BrowserRouter>
     </ThemeProvider>

@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-const Results = ({boards}) => {
+const Results = ({boards, handleDeleteBoard}) => {
 
   return (
     <div> 
@@ -36,7 +36,7 @@ const Results = ({boards}) => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Delete</Button>
+              <Button size="small" onClick={handleDeleteBoard}>Delete</Button>
             </CardActions>
           </Card>
         )}
