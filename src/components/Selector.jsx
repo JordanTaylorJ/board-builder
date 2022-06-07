@@ -12,7 +12,7 @@ const Selector = ({ step, handleChange }) => {
             name={step.name}
           > Select One
             {step.parts.map((part) =>
-              <option key={part} value={part} >{part} </option>
+              <option key={part} value={part}>{part} </option>
             )}
           </select>
         </form>
