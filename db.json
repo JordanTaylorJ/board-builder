@@ -59,23 +59,19 @@
   "completeBoards": [
     {
       "id": 1,
-      "parts": [
-        "longboard",
-        "drop through",
-        "cruiser",
-        "no risers",
-        "no griptape"
-      ]
+      "deck": "longboard",
+      "trucks": "drop through",
+      "wheels":"cruiser",
+      "risers":"no risers",
+      "griptape":"no griptape"
     },
     {
       "id": 2,
-      "parts": [
-        "cruiser/carver",
-        "reverse kingpin",
-        "risers",
-        "cruiser",
-        "griptape"
-      ]
+      "deck": "cruiser/carver",
+      "trucks": "reverse kingpin",
+      "wheels": "street",
+      "risers": "no risers",
+      "griptape": "no griptape"
     },
     {
       "deck": "cruiser/carver",

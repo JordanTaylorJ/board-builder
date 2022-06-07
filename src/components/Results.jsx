@@ -18,11 +18,21 @@ const Results = ({boards}) => {
                 Board {board.id}
               </Typography>
               <Typography variant="body2">
-                {board.parts.map((part) =>
-                  <li key={part}> 
-                    {part}
+                  <li> 
+                    {board.deck}
                   </li>
-                )}
+                  <li> 
+                    {board.trucks}
+                  </li>
+                  <li> 
+                    {board.wheels}
+                  </li>
+                  <li> 
+                    {board.risers}
+                  </li>
+                  <li> 
+                    {board.griptape}
+                  </li>
               </Typography>
             </CardContent>
             <CardActions>
