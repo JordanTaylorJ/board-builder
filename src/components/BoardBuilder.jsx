@@ -9,15 +9,15 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Selector from './Selector'; 
 
-const BoardBuilder =({handleAddBoard}) => {
+const BoardBuilder =({boards, handleAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = (e) => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1)
     console.log('from handlenext', e.target.name)
-    if (e.target.name === 5) 
-      {handleAddBoard(e, newBoard)} else {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1)
-      }
+    if (e.target.name === "5") {
+      handleAddBoard(newBoard)
+    } 
   };
   
   const handleBack = () => {
@@ -25,7 +25,14 @@ const BoardBuilder =({handleAddBoard}) => {
   }; 
 
   const handleReset = () => {
-    setActiveStep(0);
+    setActiveStep(0)
+    setNewBoard({
+      deck: '',
+      trucks: '',
+      wheels: '',
+      risers: '',
+      griptape: ''
+    })
   };
 
   const [steps, setSteps] = useState([]);

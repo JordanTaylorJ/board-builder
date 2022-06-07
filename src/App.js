@@ -36,23 +36,18 @@ function App() {
     .then((data) => setBoards(data))
   }, []);
 
-  const handleAddBoard = (e, newBoard) => {
-    e.preventDefault()
+  const handleAddBoard = (newBoard) => {
     console.log("from app", newBoard)
-    setBoards(...boards, newBoard)
+    
     fetch("http://localhost:3001/completeboards", {
       method: 'POST',
       headers: { 
         "Content-Type": "application/json", 
       },
       body: JSON.stringify(newBoard),
-    });
-  }
-
-  const handleDeleteBoard = () => {
-    fetch("http://localhost:3001/completeboards", {
-      method: 'DELETE'
-    });
+    })
+    .then(r => r.json())
+    .then((data) => setBoards(data))
   }
 
 
@@ -67,7 +62,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Results">
-            <Results boards={boards} handleDeleteBoard={handleDeleteBoard}/>
+            <Results boards={boards}/>
         </Route>
     </BrowserRouter>
     </ThemeProvider>
