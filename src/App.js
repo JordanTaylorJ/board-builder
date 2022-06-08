@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from  "react";
-import Home from "./Home";
-import Navbar from "./Navbar";
-import BoardBuilder from "./BoardBuilder";
-import Results from "./Results"
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import BoardBuilder from "./components/BoardBuilder";
+import Results from "./components/Results"
 import {BrowserRouter, Route} from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -56,7 +56,7 @@ function App() {
     <BrowserRouter className="App">
       <Navbar />
         <Route path="/BoardBuilder">
-          <BoardBuilder boards={boards} handleAddBoard={handleAddBoard} />
+          <BoardBuilder handleAddBoard={handleAddBoard} />
         </Route>  
         <Route exact path= "/">
           <Home />
