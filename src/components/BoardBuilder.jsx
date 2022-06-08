@@ -52,12 +52,9 @@ const BoardBuilder =({handleAddBoard}) => {
     .then(data => setSteps(data))
   }, []);  
 
-
   const handleChange = (e) => {
     setNewBoard({...newBoard, [e.target.name] : e.target.value})
 }
-  console.log("outside", newBoard)
-
 
   return (
     <>

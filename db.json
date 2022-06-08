@@ -80,22 +80,6 @@
       "risers": "no risers",
       "griptape": "no griptape",
       "id": 3
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "reverse kingpin",
-      "wheels": "cruiser",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 4
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "reverse kingpin",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 5
     }
   ]
 }

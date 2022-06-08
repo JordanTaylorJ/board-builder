@@ -15,8 +15,8 @@ const Results = ({boards}) => {
   return (
     <div> 
       <h1>Results</h1>
-        {boards.map((board) => 
-          <Card sx={{ minWidth: 275 }} key={board.id}>
+        {boards.map((board, idx) => 
+          <Card sx={{ minWidth: 275 }} key={idx}>
             <CardContent>
               <Typography variant="h5" component="div" color="text.secondary">
                 Board {board.id}
@@ -42,9 +42,8 @@ const Results = ({boards}) => {
             <CardActions>
               <Button size="small" onClick={handleDeleteBoard}>Delete</Button>
             </CardActions>
-          </Card>
-        )}
-        
+        </Card>
+      )}
     </div>
   );
 }

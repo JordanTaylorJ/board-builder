@@ -38,7 +38,6 @@ function App() {
 
   const handleAddBoard = (newBoard) => {
     console.log("from app", newBoard)
-    
     fetch("http://localhost:3001/completeboards", {
       method: 'POST',
       headers: { 
