@@ -8,6 +8,9 @@ import Typography from '@mui/material/Typography';
 
 const Results = ({boards}) => {
 
+  const handleDeleteBoard = () => {
+    console.log(boards)
+  }
 
   return (
     <div> 
@@ -37,7 +40,7 @@ const Results = ({boards}) => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Delete</Button>
+              <Button size="small" onClick={handleDeleteBoard}>Delete</Button>
             </CardActions>
           </Card>
         )}

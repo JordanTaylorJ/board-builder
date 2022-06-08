@@ -9,8 +9,18 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Selector from './Selector'; 
 
-const BoardBuilder =({boards, handleAddBoard}) => {
+const BoardBuilder =({handleAddBoard}) => {
   const [activeStep, setActiveStep] = React.useState(0);
+
+  const [steps, setSteps] = useState([]);
+
+  const [newBoard, setNewBoard] = useState({
+    deck: '',
+    trucks: '',
+    wheels: '',
+    risers: '',
+    griptape: ''
+  });
 
   const handleNext = (e) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
@@ -35,25 +45,19 @@ const BoardBuilder =({boards, handleAddBoard}) => {
     })
   };
 
-  const [steps, setSteps] = useState([]);
-  const [newBoard, setNewBoard] = useState({
-    deck: '',
-    trucks: '',
-    wheels: '',
-    risers: '',
-    griptape: ''
-  });
+
+  useEffect(() => {
+    fetch("http://localhost:3001/steps")
+    .then(r => r.json())
+    .then(data => setSteps(data))
+  }, []);  
+
 
   const handleChange = (e) => {
     setNewBoard({...newBoard, [e.target.name] : e.target.value})
 }
   console.log("outside", newBoard)
 
-  useEffect(() => {
-    fetch("http://localhost:3001/steps")
-    .then(r => r.json())
-    .then(data => setSteps(data))
-  }, []);   
 
   return (
     <>

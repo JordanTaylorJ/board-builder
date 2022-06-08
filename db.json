@@ -83,8 +83,8 @@
     },
     {
       "deck": "cruiser/carver",
-      "trucks": "drop through",
-      "wheels": "street",
+      "trucks": "reverse kingpin",
+      "wheels": "cruiser",
       "risers": "no risers",
       "griptape": "no griptape",
       "id": 4
@@ -92,66 +92,10 @@
     {
       "deck": "cruiser/carver",
       "trucks": "reverse kingpin",
-      "wheels": "cruiser",
+      "wheels": "street",
       "risers": "no risers",
       "griptape": "no griptape",
       "id": 5
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "drop through",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 6
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "drop through",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 7
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "drop through",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 8
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "drop through",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 9
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "reverse kingpin",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 10
-    },
-    {
-      "deck": "oldschool",
-      "trucks": "reverse kingpin",
-      "wheels": "cruiser",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 11
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "reverse kingpin",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 12
     }
   ]
 }

@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from  "react";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import BoardBuilder from "./components/BoardBuilder";
-import Results from "./components/Results"
+import Home from "./Home";
+import Navbar from "./Navbar";
+import BoardBuilder from "./BoardBuilder";
+import Results from "./Results"
 import {BrowserRouter, Route} from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
