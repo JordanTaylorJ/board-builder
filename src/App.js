@@ -46,7 +46,8 @@ function App() {
       body: JSON.stringify(newBoard),
     })
     .then(r => r.json())
-    .then((data) => setBoards(data))
+    //.then((data) => setBoards(data))
+    .then((data) => setBoards([...boards, data]))
   }
 
 

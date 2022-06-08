@@ -2,12 +2,11 @@ import React from "react";
 
 const Selector = ({ step, handleChange }) => {
 
-  
-
     return (
         <form key={step.id}> 
           <select 
-            value={step.parts.value}
+            //defaultValue={step.parts.value}
+            defaultValue={step.parts[0]} selected
             onChange={handleChange}
             name={step.name}
           > Select One

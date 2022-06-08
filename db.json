@@ -76,9 +76,9 @@
     {
       "deck": "cruiser/carver",
       "trucks": "reverse kingpin",
-      "wheels": "street",
-      "risers": "no risers",
-      "griptape": "no griptape",
+      "wheels": "cruiser",
+      "risers": "",
+      "griptape": "",
       "id": 3
     }
   ]

@@ -55,6 +55,7 @@ const BoardBuilder =({handleAddBoard}) => {
   const handleChange = (e) => {
     setNewBoard({...newBoard, [e.target.name] : e.target.value})
 }
+console.log(newBoard)
 
   return (
     <>
