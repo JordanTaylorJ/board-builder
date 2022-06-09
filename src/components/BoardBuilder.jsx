@@ -21,6 +21,7 @@ const BoardBuilder =({handleAddBoard}) => {
     risers: 'risers',
     griptape: 'griptape'
   });
+  
 
   const handleNext = (e) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)

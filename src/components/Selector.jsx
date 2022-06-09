@@ -1,26 +1,24 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
 const Selector = ({ step, handleChange }) => {
-  /*
-  const [parts, setParts] = useState();
-
-  useEffect(() => {
-    setParts(step.parts)
-  }, [step.parts])
   
-  console.log("parts", parts)
-  */
+  const [part, setPart] = useState('');
+
+  const handleChangePart = (e) => {
+    setPart(e.target.value)
+    handleChange(e)
+  }
+
     return (
-        <form key={step.parts}> 
-          <select 
-            onChange={handleChange}
-            name={step.name}
-          > Select One
-            {step.parts.map((part) =>
-              <option key={part} value={part}>{part} </option>
-            )}
-          </select>
-        </form>
+      <select 
+        value={part}
+        onChange={handleChangePart}
+        name={step.name}
+      > Select One
+        {step.parts.map((part) =>
+          <option key={part} value={part}>{part} </option>
+        )}
+      </select>
     );
 }
 

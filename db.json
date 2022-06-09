@@ -112,6 +112,22 @@
       "risers": "risers",
       "griptape": "no griptape",
       "id": 7
+    },
+    {
+      "deck": "cruiser/carver",
+      "trucks": "standard kingpin",
+      "wheels": "skatepark",
+      "risers": "risers",
+      "griptape": "griptape",
+      "id": 8
+    },
+    {
+      "deck": "oldschool",
+      "trucks": "standard kingpin",
+      "wheels": "skatepark",
+      "risers": "risers",
+      "griptape": "griptape",
+      "id": 9
     }
   ]
 }
