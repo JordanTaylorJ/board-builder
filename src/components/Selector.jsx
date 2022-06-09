@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 const Selector = ({ step, handleChange }) => {
-
+  /*
   const [parts, setParts] = useState();
 
   useEffect(() => {
@@ -9,11 +9,10 @@ const Selector = ({ step, handleChange }) => {
   }, [step.parts])
   
   console.log("parts", parts)
-
+  */
     return (
-        <form key={parts}> 
+        <form key={step.parts}> 
           <select 
-            value={null}
             onChange={handleChange}
             name={step.name}
           > Select One

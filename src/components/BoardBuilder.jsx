@@ -15,11 +15,11 @@ const BoardBuilder =({handleAddBoard}) => {
   const [steps, setSteps] = useState([]);
 
   const [newBoard, setNewBoard] = useState({
-    deck: '',
-    trucks: '',
-    wheels: '',
-    risers: '',
-    griptape: ''
+    deck: 'standard',
+    trucks: 'standard kingpin',
+    wheels: 'skatepark',
+    risers: 'risers',
+    griptape: 'griptape'
   });
 
   const handleNext = (e) => {
