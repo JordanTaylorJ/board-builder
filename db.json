@@ -80,6 +80,14 @@
       "risers": "",
       "griptape": "",
       "id": 3
+    },
+    {
+      "deck": "oldschool",
+      "trucks": "standard kingpin",
+      "wheels": "street",
+      "risers": "risers",
+      "griptape": "griptape",
+      "id": 4
     }
   ]
 }

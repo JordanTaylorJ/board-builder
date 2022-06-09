@@ -1,12 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 const Selector = ({ step, handleChange }) => {
 
+  const [parts, setParts] = useState();
+
+  useEffect(() => {
+    setParts(step.parts)
+  }, [step.parts])
+  
+  console.log("parts", parts)
+
     return (
-        <form key={step.id}> 
+        <form key={parts}> 
           <select 
-            //defaultValue={step.parts.value}
-            defaultValue={step.parts[0]} selected
+            value={null}
             onChange={handleChange}
             name={step.name}
           > Select One
