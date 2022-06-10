@@ -6,10 +6,15 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-const Results = ({boards}) => {
+const Results = ({boards, onDeleteBoard}) => {
 
-  const handleDeleteBoard = () => {
-    console.log(boards)
+  const handleDelete = (board) => {
+    console.log(board)
+    fetch(`http://localhost:3001/completeboards/${board.id}`, {
+      method: "DELETE",
+    })
+    .then(r => r.json())
+    .then(() => onDeleteBoard(board))
   }
 
   return (
@@ -40,7 +45,7 @@ const Results = ({boards}) => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" onClick={handleDeleteBoard}>Delete</Button>
+              <Button size="small" onClick={() => handleDelete(board)}>Delete</Button>
             </CardActions>
         </Card>
       )}

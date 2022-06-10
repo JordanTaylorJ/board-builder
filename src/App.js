@@ -46,9 +46,14 @@ function App() {
       body: JSON.stringify(newBoard),
     })
     .then(r => r.json())
-    //.then((data) => setBoards(data))
     .then((data) => setBoards([...boards, data]))
   }
+
+  const handleDeleteBoard = (deletedBoard) => {
+    const updatedBoards = boards.filter((board) => board.id !== deletedBoard.id)
+    setBoards(updatedBoards)
+  }
+  console.log("from app", boards)
 
 
   return (
@@ -62,7 +67,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Results">
-            <Results boards={boards}/>
+            <Results boards={boards} onDeleteBoard={handleDeleteBoard}/>
         </Route>
     </BrowserRouter>
     </ThemeProvider>
