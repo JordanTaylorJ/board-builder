@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Selector from './Selector'; 
 
 const BoardBuilder =({handleAddBoard}) => {
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   const [steps, setSteps] = useState([]);
 
@@ -24,7 +24,6 @@ const BoardBuilder =({handleAddBoard}) => {
   
   const handleNext = (e) => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
-    console.log('from handlenext', e.target.name)
     if (e.target.name === "5") {
       handleAddBoard(newBoard)
     } 
@@ -37,14 +36,13 @@ const BoardBuilder =({handleAddBoard}) => {
   const handleReset = () => {
     setActiveStep(0)
     setNewBoard({
-      deck: '',
-      trucks: '',
-      wheels: '',
-      risers: '',
-      griptape: ''
+      deck: 'standard',
+      trucks: 'standard kingpin',
+      wheels: 'skatepark',
+      risers: 'risers',
+      griptape: 'griptape'
     })
   };
-
 
   useEffect(() => {
     fetch("http://localhost:3001/steps")
@@ -54,8 +52,7 @@ const BoardBuilder =({handleAddBoard}) => {
 
   const handleChange = (e) => {
     setNewBoard({...newBoard, [e.target.name] : e.target.value})
-}
-console.log("from builder", newBoard);
+  };
 
   return (
     <>

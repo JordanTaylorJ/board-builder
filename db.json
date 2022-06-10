@@ -16,7 +16,7 @@
       "id": 2,
       "name": "trucks",
       "label": "Choose your trucks",
-      "description": "An ad group contains one or more ads which target a shared set of keywords.",
+      "description": "Trucks are a huge determiner of how your board will ride. A standard kingpin will give you a sharper response, while a reverse kingpin makes for a more stable ride. There are also drop through trucks that are mostly seen on longboards. The purpose of the drop through is to lower the center of gravity, making it more stable for higher speeds.",
       "parts": [
         "standard kingpin",
         "reverse kingpin",
@@ -56,5 +56,22 @@
       ]
     }
   ],
-  "completeBoards": []
+  "completeBoards": [
+    {
+      "deck": "standard",
+      "trucks": "standard kingpin",
+      "wheels": "skatepark",
+      "risers": "risers",
+      "griptape": "griptape",
+      "id": 1
+    },
+    {
+      "deck": "cruiser/carver",
+      "trucks": "reverse kingpin",
+      "wheels": "cruiser",
+      "risers": "no risers",
+      "griptape": "no griptape",
+      "id": 2
+    }
+  ]
 }

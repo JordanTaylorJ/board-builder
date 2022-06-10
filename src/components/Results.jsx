@@ -15,7 +15,7 @@ const Results = ({boards, onDeleteBoard}) => {
     })
     .then(r => r.json())
     .then(() => onDeleteBoard(board))
-  }
+  };
 
   return (
     <div> 

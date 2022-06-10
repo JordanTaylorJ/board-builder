@@ -11,7 +11,7 @@ const Home = () => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     color: 'white',
-  }
+  };
 
   return (
     <div style={myStyle}>

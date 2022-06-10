@@ -37,7 +37,6 @@ function App() {
   }, []);
 
   const handleAddBoard = (newBoard) => {
-    console.log("from app", newBoard)
     fetch("http://localhost:3001/completeboards", {
       method: 'POST',
       headers: { 
@@ -47,13 +46,12 @@ function App() {
     })
     .then(r => r.json())
     .then((data) => setBoards([...boards, data]))
-  }
+  };
 
   const handleDeleteBoard = (deletedBoard) => {
     const updatedBoards = boards.filter((board) => board.id !== deletedBoard.id)
     setBoards(updatedBoards)
-  }
-  console.log("from app", boards)
+  };
 
 
   return (

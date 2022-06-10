@@ -7,7 +7,7 @@ const Selector = ({ step, handleChange }) => {
   const handleChangePart = (e) => {
     setPart(e.target.value)
     handleChange(e)
-  }
+  };
 
     return (
       <select 
