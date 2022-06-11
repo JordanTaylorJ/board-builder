@@ -58,20 +58,20 @@
   ],
   "completeBoards": [
     {
+      "deck": "oldschool",
+      "trucks": "reverse kingpin",
+      "wheels": "skatepark",
+      "risers": "risers",
+      "griptape": "griptape",
+      "id": 3
+    },
+    {
       "deck": "standard",
       "trucks": "standard kingpin",
       "wheels": "skatepark",
       "risers": "risers",
       "griptape": "griptape",
-      "id": 1
-    },
-    {
-      "deck": "cruiser/carver",
-      "trucks": "reverse kingpin",
-      "wheels": "cruiser",
-      "risers": "no risers",
-      "griptape": "no griptape",
-      "id": 2
+      "id": 4
     }
   ]
 }

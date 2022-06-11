@@ -67,6 +67,9 @@ function App() {
         <Route path="/Results">
             <Results boards={boards} onDeleteBoard={handleDeleteBoard}/>
         </Route>
+        <Route path="*">
+          404 Page Not Found
+        </Route>
     </BrowserRouter>
     </ThemeProvider>
   );
