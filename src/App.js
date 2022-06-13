@@ -5,6 +5,7 @@ import BoardBuilder from "./components/BoardBuilder";
 import Results from "./components/Results"
 import {BrowserRouter, Route} from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {Switch} from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -58,18 +59,20 @@ function App() {
     <ThemeProvider theme={theme}> 
     <BrowserRouter className="App">
       <Navbar />
-        <Route path="/BoardBuilder">
-          <BoardBuilder handleAddBoard={handleAddBoard} />
-        </Route>  
-        <Route exact path= "/">
-          <Home />
-        </Route>
-        <Route path="/Results">
-            <Results boards={boards} onDeleteBoard={handleDeleteBoard}/>
-        </Route>
-        <Route path="*">
-          404 Page Not Found
-        </Route>
+        <Switch>
+          <Route path="/BoardBuilder">
+            <BoardBuilder handleAddBoard={handleAddBoard} />
+          </Route>  
+          <Route exact path= "/">
+            <Home />
+          </Route>
+          <Route path="/Results">
+              <Results boards={boards} onDeleteBoard={handleDeleteBoard}/>
+          </Route>
+          <Route path="*">
+            404 Page Not Found
+          </Route>
+        </Switch>
     </BrowserRouter>
     </ThemeProvider>
   );
