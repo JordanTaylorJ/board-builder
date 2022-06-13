@@ -3,9 +3,9 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import BoardBuilder from "./components/BoardBuilder";
 import Results from "./components/Results"
-import {BrowserRouter, Route} from "react-router-dom";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import {Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {ThemeProvider, createTheme } from '@mui/material/styles';
+
 
 const theme = createTheme({
   palette: {
