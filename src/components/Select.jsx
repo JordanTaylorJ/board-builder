@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Selector = ({ step, handleChange }) => {
+const Select = ({ step, handleChange }) => {
   
   const [part, setPart] = useState('');
 
@@ -22,4 +22,4 @@ const Selector = ({ step, handleChange }) => {
     );
 }
 
-export default Selector;
+export default Select;

@@ -7,7 +7,7 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Selector from './Selector'; 
+import Select from './Select'; 
 
 const BoardBuilder =({handleAddBoard}) => {
   const [activeStep, setActiveStep] = useState(0);
@@ -72,7 +72,7 @@ const BoardBuilder =({handleAddBoard}) => {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                  <Selector 
+                  <Select 
                     step={step} 
                     handleAddBoard={handleAddBoard}
                     handleChange={handleChange}
