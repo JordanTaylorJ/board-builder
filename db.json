@@ -66,9 +66,9 @@
       "id": 1
     },
     {
-      "deck": "oldschool",
-      "trucks": "reverse kingpin",
-      "wheels": "cruiser",
+      "deck": "standard",
+      "trucks": "standard kingpin",
+      "wheels": "skatepark",
       "risers": "risers",
       "griptape": "griptape",
       "id": 2

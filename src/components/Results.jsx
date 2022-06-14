@@ -17,7 +17,7 @@ const Results = ({boards, onDeleteBoard}) => {
     .then(() => onDeleteBoard(board))
   };
 
-  if (boards.length > 1) {
+  if (boards.length >= 1) {
   return (
     <div> 
       <h1>Results</h1>
@@ -52,6 +52,11 @@ const Results = ({boards, onDeleteBoard}) => {
       )}
     </div>
   );
+  }
+  else {
+    return(
+      <h1>Click Build Your Board to get started!</h1>
+    )
   }
 }
 
