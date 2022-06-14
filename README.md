@@ -10,7 +10,7 @@
 * List created boards
 * Delete for each build
 
-## Component Hierarchy
+## Component Hierarchy: 
 ![Component Hierarchy](./Hierarchy.png)
 
 ## Image Credits

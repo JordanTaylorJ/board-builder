@@ -17,6 +17,7 @@ const Results = ({boards, onDeleteBoard}) => {
     .then(() => onDeleteBoard(board))
   };
 
+  if (boards.length > 1) {
   return (
     <div> 
       <h1>Results</h1>
@@ -51,6 +52,7 @@ const Results = ({boards, onDeleteBoard}) => {
       )}
     </div>
   );
+  }
 }
 
 export default Results;
