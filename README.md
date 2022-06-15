@@ -1,4 +1,4 @@
-## BoardBuilder was designed as a tool to build out a complete skateboard.
+### BoardBuilder was designed as a tool to build out a complete skateboard.
 
 ## Tech Stack: 
 * Javascript React
@@ -13,9 +13,8 @@
 ## Component Hierarchy: 
 ![Component Hierarchy](./Hierarchy.png)
 
-## Image Credits
- 
- Both found via [Unsplash](https://unsplash.com/): 
+## Image Credits:
+Found via [Unsplash](https://unsplash.com/)
 * Artyom Lisov - Home background 
 * Alina Kovalchuk - bottom of BoardBuilder
 
