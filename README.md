@@ -1,4 +1,4 @@
-### BoardBuilder was designed as a tool to build out a complete skateboard.
+### BoardBuilder was designed as a tool to build a complete skateboard based on your syle of riding.
 
 ## Tech Stack: 
 * Javascript React
