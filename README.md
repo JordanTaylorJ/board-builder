@@ -6,7 +6,7 @@
 
 ## Features:
 * Homepage display with navigation panel
-* Step-by-step guide to build out your board.
+* Step-by-step guide to build out your board
 * List created boards
 * Delete for each build
 
@@ -14,7 +14,10 @@
 ![Component Hierarchy](./Hierarchy.png)
 
 ## Image Credits
-### Home - Artyom Lisov
+ 
+ Both found via [Unsplash](https://unsplash.com/): 
+* Artyom Lisov - Home background 
+* Alina Kovalchuk - bottom of BoardBuilder
 
 
 
